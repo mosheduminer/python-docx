@@ -76,6 +76,16 @@ register_element_cls("w:r", CT_R)
 register_element_cls("w:t", CT_Text)
 
 # ---------------------------------------------------------------------------
+# footnote / endnote related elements
+from .fntent import CT_Footnotes, CT_Footnote, CT_Endnotes, CT_Endnote, CT_FootnoteReference, CT_EndnoteReference
+register_element_cls('w:footnote',          CT_Footnote)
+register_element_cls('w:footnotes',         CT_Footnotes)
+register_element_cls('w:endnote',           CT_Endnote)
+register_element_cls('w:endnotes',          CT_Endnotes)
+register_element_cls('w:footnoteReference', CT_FootnoteReference)
+register_element_cls('w:endnoteReference',  CT_EndnoteReference)
+
+# ---------------------------------------------------------------------------
 # header/footer-related mappings
 
 register_element_cls("w:evenAndOddHeaders", CT_OnOff)
